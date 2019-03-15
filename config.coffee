@@ -6,7 +6,7 @@ module.exports =
   ############################
 
   # Server listen port
-  serverPort: 80
+  serverPort: 8000
 
   # RTMP server listen port
   rtmpServerPort: 1935
@@ -85,7 +85,7 @@ module.exports =
   # rtmp://{host}:{rtmpServerPort}/{recordedApplicationName}/mp4:{filename}
   # To disable this feature, comment out the following two lines.
   recordedApplicationName: 'file'
-  recordedDir: 'file'
+  recordedDir: process.env.dataDir || 'file'
 
   ### RTMP configurations ###
 
