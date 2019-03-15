@@ -14,11 +14,14 @@ WORKDIR /home/nodejs/app
 # where available (npm@5+)
 
 COPY . .
+RUN npm install -d
+RUN npm audit fix
+
 # RUN npm audit fix
 EXPOSE 8000
 EXPOSE 1935
 # override dataDir by passing env variable while running docker to serve your own video files.
-ENV dataDir /home/nodejs/app/file
+ENV dataDir /home/nodejs/app/file 
 ENV HTTP_PORT 8000 
 ENV RTMP_PORT 1935
 ENV TINI_VERSION v0.18.0

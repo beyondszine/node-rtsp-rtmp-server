@@ -15,7 +15,7 @@ run:
   -p 8000:8000 -p 1935:1935 \
   --name ${DOCKER_IMAGE_NAME} \
   -e dataDir=${DATA_DIR} \
-  -v ${VIDEOS_DIR}:${DATA_DIR}
+  -v ${VIDEOS_DIR}:${DATA_DIR} \
   ${ME_USER}/${DOCKER_IMAGE_NAME}
 
 console:
