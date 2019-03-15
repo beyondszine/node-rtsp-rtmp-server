@@ -10,9 +10,9 @@
     //###########################
 
     // Server listen port
-    serverPort: 8000,
+    serverPort: process.env.HTTP_PORT || 8000,
     // RTMP server listen port
-    rtmpServerPort: 1935,
+    rtmpServerPort: process.env.RTMP_PORT || 1935,
     // Server name which will be embedded in
     // RTSP and HTTP response headers.
     // Default server name is used when this value is null.

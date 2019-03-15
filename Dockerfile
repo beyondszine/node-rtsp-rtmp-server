@@ -1,5 +1,5 @@
-FROM ubuntu:18.04
-RUN apt-get -y install curl dnsutils iputils-ping
+FROM ubuntu:16.04
+RUN apt-get update && apt-get -y install curl dnsutils iputils-ping
 RUN curl -sL https://deb.nodesource.com/setup_10.x -o nodesource_setup.sh
 RUN bash nodesource_setup.sh
 RUN apt-get -y install nodejs

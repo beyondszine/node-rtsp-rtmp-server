@@ -5,11 +5,11 @@ module.exports =
   ### Basic configurations ###
   ############################
 
-  # Server listen port
-  serverPort: 8000
+  # Server listen port 8080
+  serverPort: process.env.HTTP_PORT
 
-  # RTMP server listen port
-  rtmpServerPort: 1935
+  # RTMP server listen port 1935
+  rtmpServerPort: process.env.RTMP_PORT
 
   # Server name which will be embedded in
   # RTSP and HTTP response headers.
